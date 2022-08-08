@@ -10,7 +10,7 @@ function calcularPromedio(numeros){
     for(i=0; i<numeros.length; i++){
         suma += numeros[i];
     }
-    return suma/numeros.length;
+    return (suma/numeros.length).toFixed(2);
 }
 
 function calcularMasChico(numeros){
@@ -45,8 +45,11 @@ function calcularMasRepetido(numeros){
     return masRepetido;
 }
 
-
+document.querySelector('#calcular').onclick = function(){
 document.querySelector('#promedio').textContent = `El promedio es ${calcularPromedio(numeros)};`
 document.querySelector('#mas-chico').textContent = `El número más chico es ${calcularMasChico(numeros)};`
 document.querySelector('#mas-grande').textContent = `El número más grande es ${calcularMasGRande(numeros)};`
 document.querySelector('#mas-repetido').textContent = `El número más repetido es ${calcularMasRepetido(numeros)};`
+
+return false;
+}

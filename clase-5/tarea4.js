@@ -1,58 +1,55 @@
-const listaDeNumeros = [];
+let lista = document.querySelectorAll('li');
+let numeros = [];
 
-function convertirArray() {
-    for(let i = 0; i < (document.querySelectorAll('li').length); i++) {
-        listaDeNumeros.push(Number(document.querySelectorAll('li')[i].innerText));
-    }
+for(let i = 0; i < lista.length; i++) {
+        numeros.push(Number(lista[i].textContent));
 }
 
-convertirArray();
-
-function calcularPromedio(){
-    let sumaNumeros = 0;
-    for(let i=0; i<listaDeNumeros.length; i++){
-        sumaNumeros = sumaNumeros + listaDeNumeros[i];
+function calcularPromedio(numeros){
+    let suma = 0
+    for(i=0; i<numeros.length; i++){
+        suma += numeros[i];
     }
-
-    return sumaNumeros / listaDeNumeros.length;
+    return (suma/numeros.length).toFixed(2);
 }
 
-function calcularNumeroMasPequeno(){
-    let numeroMasPequeno = listaDeNumeros[0];
-    for(let i=0; i<listaDeNumeros.length; i++){
-        if(listaDeNumeros[i] < numeroMasPequeno){
-            numeroMasPequeno = listaDeNumeros[i];
+function calcularMasChico(numeros){
+    let menor = numeros[0];
+    for(i=0; i<numeros.length; i++){
+        if(numeros[i] < menor){
+            menor = numeros[i];
         }
     }
-    
-    return numeroMasPequeno
+    return menor;
 }
 
-function calcularNumeroMasGrande(){
-    let numeroMasGrande = listaDeNumeros[0];
-    for(let i=0; i<listaDeNumeros.length; i++){
-        if(listaDeNumeros[i] > numeroMasGrande){
-            numeroMasGrande = listaDeNumeros[i];
+function calcularMasGRande(numeros){
+    let mayor = 0;
+    for(i=0; i<numeros.length; i++){
+        if(numeros[i] > mayor){
+            mayor = numeros[i];
         }
     }
-
-    return numeroMasGrande
+    return mayor;
 }
 
-function calacularNumeroMasFrecuente(){
-    let numeroMasFrecuente = 0;
-    for(let i=0; i<listaDeNumeros.length; i++){
-        for(let j = i +1; j < listaDeNumeros.length; j++){
-            if(listaDeNumeros[i]===listaDeNumeros[j]){
-                numeroMasFrecuente = listaDeNumeros[i]
+function calcularMasRepetido(numeros){
+    let masRepetido = 0;
+    for(let i=0; i<numeros.length; i++){
+        for(let j=i+1; j<numeros.length; j++){
+            if(numeros[i]===numeros[j]){
+                masRepetido = numeros[i]
             }
         }
     }
-
-    return numeroMasFrecuente
+    return masRepetido;
 }
 
-document.querySelector('#promedio').innerText = `El promedio es ${calcularPromedio()}`;
-document.querySelector('#mas-chico').innerText = `El número más pequeño es ${calcularNumeroMasPequeno()}`;
-document.querySelector('#mas-grande').innerText = `El número más grande es ${calcularNumeroMasGrande()}`;
-document.querySelector('#mas-repetido').innerText = `El número más frecuente es ${calacularNumeroMasFrecuente()}`;
+document.querySelector('#calcular').onclick = function(){
+document.querySelector('#promedio').textContent = `El promedio es ${calcularPromedio(numeros)};`
+document.querySelector('#mas-chico').textContent = `El número más chico es ${calcularMasChico(numeros)};`
+document.querySelector('#mas-grande').textContent = `El número más grande es ${calcularMasGRande(numeros)};`
+document.querySelector('#mas-repetido').textContent = `El número más repetido es ${calcularMasRepetido(numeros)};`
+
+return false;
+}

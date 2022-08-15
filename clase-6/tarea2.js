@@ -36,7 +36,7 @@ $botonCalcular.onclick = function(){
 
 
     for (let i=0; i<$salariosIntegrantes.length; i++){
-        if($salariosIntegrantes[i].value !== ''){
+        if($salariosIntegrantes[i].value !== '' && $salariosIntegrantes[i].value > 0){
             salarios.push(Number($salariosIntegrantes[i].value));
         }
     }

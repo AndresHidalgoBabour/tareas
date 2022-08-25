@@ -17,7 +17,7 @@ probarValidarNombre();
 
 function probarValidarCiudad(){
     console.assert(
-        validarCiudad('') === 'Seleccine una ciudad',
+        validarCiudad('') === 'Seleccione una ciudad',
         'Validar ciudad no validó una ciudad sea seleccionada',
     );
 }

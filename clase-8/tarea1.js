@@ -122,13 +122,13 @@ function obtenerPromedio(numeros) {
   return (acumulador / numeros.length).toFixed(2);
 }
 
-function ValidarCantidadIntegrantes(cantidadIntegrantes){
+function validarCantidadIntegrantes(cantidadIntegrantes){
   if(cantidadIntegrantes === " "){
-    return "Este campo no puede estar vacío";
+    return "Este campo no debe estar vacío";
   }
 
   if(!/^[0-9]+$/.test(cantidadIntegrantes)){
-    return "Este campo debe tener solo números";
+    return "Este campo no puede tener letras"
   }
   
   return "";
@@ -140,7 +140,7 @@ function validarEdadesIntegrantes(edades) {
     errores[`$integrante${i + 1}`] = "";
 
     if (edades[i] == " ") {
-      errores[`$integrante{i + 1}`] = `$integrante#{i + 1} no puede estar vacío`;
+      errores[`$integrante{i + 1}`] = `$integrante#${i + 1} no puede estar vacío`;
     }
     if (edades[i] < 0) {
       errores[`$integrante${i + 1}`] = `$integrante#${i + 1} no puede ser menor a cero`;
@@ -174,7 +174,7 @@ function validarFormulario(event){
   const $form = document.querySelector('#calculador-edades');
   const cantidadIntegrantes = $form.cantidadIntegrantes.value;
 
-  const errorCantidadIntegrantes = ValidarCantidadIntegrantes(cantidadIntegrantes);
+  const errorCantidadIntegrantes = validarCantidadIntegrantes(cantidadIntegrantes);
 
   const errores = {
     cantidadIntegrantes: errorCantidadIntegrantes,

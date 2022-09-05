@@ -1,11 +1,11 @@
 function probarCantidadIntegrantes(){
     console.assert(
-        ValidarCantidadIntegrantes('') === "Este campo no debe estar vacío",
+        validarCantidadIntegrantes('') === "Este campo no debe estar vacío",
         "Validar cantidad integrantes no validó que cantidad de integrantes no esté vació"
     );
 
     console.assert(
-        ValidarCantidadIntegrantes('a') === "Este campo no puede tener letras",
+        validarCantidadIntegrantes('a') === "Este campo no puede tener letras",
         "Validar cantidad integrantes no validó que cantidad de integrantes no tenga letras"
     );
 }

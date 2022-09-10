@@ -5,7 +5,7 @@ function probarValidarSalarios(){
     );
 
     console.assert(
-        validarSalarios('0') === "Este campo no debe ser 0",
+        validarSalarios(0) === "Este campo no debe ser 0",
         "Validar salarios no validó que slarios no sea 0"
     );
 

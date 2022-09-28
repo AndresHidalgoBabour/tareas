@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarea 10 Memotest</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <style type="text/css">
+        body, html {
+            height: 100%;
+        }
+    
+        .completo {
+            background: grey;
+        }
+    
+        .columna {
+            border: 1px solid black;
+        }
+    
+        .fila {
+            height: 20vh;
+        }
+    
+        .cuadro {
+            opacity: 0;
+            transition: opacity ease 0.2s;
+            border: 3px solid black;
+            cursor: pointer;
+        }
+    
+        .rojo {
+            background-color: red;
+        }
+    
+        .verde {
+            background-color: green;
+        }
+
+        .naranja {
+            background-color: aquamarine;
+        }
+    
+        .amarillo {
+            background-color: yellow;
+        }
+
+        .violeta {
+            background-color: blueviolet;
+        }
+    
+        .negro {
+            background-color: black;
+        }
+    
+        .blanco {
+            background-color: white;
+        }
+    
+        .azul {
+            background-color: blue;
+        }
+    
+        #final{
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div id="final">
+    <p class="display-4">Terminaste!, lo hiciste en <strong><!-- --></strong> intentos.</p>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <p>Intentos # <strong id="intentos">0</strong></p>
+        </div>
+        <div class="col-sm-6"id="tiempo">
+            <p>Tiempo</p>
+        </div>
+</div>
+
+<div id="mesa">
+<div class="container-fluid h-100">
+    <div class="row fila">
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+    </div>
+    <div class="row fila">
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+    </div>
+    <div class="row fila">
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+    </div>
+    <div class="row fila">
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+        <div class="col columna">
+            <div class="cuadro h-100"></div>
+        </div>
+    </div>
+</div>
+
+<script src='memotest.js'></script> 
+</body>
+</html>

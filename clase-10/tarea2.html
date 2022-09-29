@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tarea 2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="tarea2.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div id="integrantes">
+
+    </div>
+
+    <div class="alert alert-danger" role="alert"> Calculador de salarios </div>
+    
+    <div class="row row-cols-auto">
+        <div class="col">
+            <input type="button" class="btn btn-outline-primary" value="Agregar" id="boton-agregar">
+            <br>
+        </div>
+        <div class="col">
+            <input type="button" class="btn btn-outline-success" value="Quitar" id="boton-quitar">
+            <br>
+        </div>
+        <div class="col">
+            <input type="button" class="btn btn-outline-info" value="Calcular" id="boton-calcular">
+            <br>
+        </div>
+
+    <div class="container text-center" id="resultados">
+        <div class="row row-cols-auto">
+            <div class="col">
+                <label>Mayor salario anual: </label>
+                <label id="mayor-salario-anual"></label>
+                <br>
+            </div>
+            <div class="col">
+                <label>Menor salario anual: </label>
+                <label id="menor-salario-anual"></label>
+                <br>
+            </div>
+            <div class="col">
+                <label>Promedio salario anual: </label>
+                <label id="promedio-salario-anual"></label>
+                <br>
+            </div>
+            <div class="col">
+                <label>Promedio salario mensual: </label>
+                <label id="promedio-salario-mensual"></label>
+                <br>
+            </div>
+    </div>
+
+    <script src='tarea2.js'></script>
+    <script src='pruebas2.js'></script>
+</body>
+</html> 

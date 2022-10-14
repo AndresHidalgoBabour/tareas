@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "http-server -c -1 p8081",
+    "start": "http-server -c-1",
     "cypress-run": "cypress run",
     "cypress-dev": "cypress open",
     "test": "run-p start cypress-run",
